@@ -5,7 +5,7 @@ data_dir=$2
 
 dlx() {
   echo "DOWNLOADING"
-  wget $1/$2 -P $data_dir 
+  # wget $1/$2 -P $data_dir 
   tar -zxvf $data_dir/$2 -C $data_dir
   rm $data_dir/$2
 }
@@ -26,5 +26,5 @@ dlx $conll_url conll-2012-scripts.v3.tar.gz
 echo "**conll_cemantix**"
 dlx http://conll.cemantix.org/download reference-coreference-scorers.v8.01.tar.gz
 
-echo "**BASH**"
-bash conll-2012/v3/scripts/skeleton2conll.sh -D $ontonotes_path/data/files/data $data_dir/conll-2012
+# echo "**BASH**"
+# bash conll-2012/v3/scripts/skeleton2conll.sh -D $ontonotes_path/data/files/data $data_dir/conll-2012
